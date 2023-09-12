@@ -3,24 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yamagishiryuukiyoshi <yamagishiryuukiyo    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/10 20:41:22 by ryamagis          #+#    #+#             */
-/*   Updated: 2023/09/10 22:03:23 by ryamagis         ###   ########.fr       */
+/*   Created: 2023/09/12 17:16:18 by yamagishiry       #+#    #+#             */
+/*   Updated: 2023/09/12 17:16:19 by yamagishiry      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	count(char const *s, char c)
-{
-	int	i;
-	int j;
-
-	
-}
-
-char **ft_split(char const *s, char c)
-{
-
-}
