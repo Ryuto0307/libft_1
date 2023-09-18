@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yamagishiryuukiyoshi <yamagishiryuukiyo    +#+  +:+       +#+        */
+/*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 03:03:25 by yamagishiry       #+#    #+#             */
-/*   Updated: 2023/09/06 19:18:30 by yamagishiry      ###   ########.fr       */
+/*   Updated: 2023/09/12 18:21:42 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	*ft_bzero(void *buf, size_t n)
 {
-	ft_memset(buf, 0 , n);
+	ft_memset(buf, 0, n);
 	return (NULL);
 }

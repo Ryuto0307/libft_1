@@ -6,11 +6,11 @@
 /*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 19:49:25 by ryamagis          #+#    #+#             */
-/*   Updated: 2023/06/13 19:58:00 by ryamagis         ###   ########.fr       */
+/*   Updated: 2023/09/12 18:27:09 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int	c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 	{

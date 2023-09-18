@@ -6,11 +6,11 @@
 /*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 19:34:02 by ryamagis          #+#    #+#             */
-/*   Updated: 2023/06/13 19:47:54 by ryamagis         ###   ########.fr       */
+/*   Updated: 2023/09/12 18:26:34 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int	c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 	{
