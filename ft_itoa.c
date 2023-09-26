@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yamagishiryuukiyoshi <yamagishiryuukiyo    +#+  +:+       +#+        */
+/*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 14:59:03 by ryamagis          #+#    #+#             */
-/*   Updated: 2023/09/12 03:03:34 by yamagishiry      ###   ########.fr       */
+/*   Updated: 2023/09/26 17:42:02 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,16 @@ size_t	count_digits(int n)
 	size_t	i;
 
 	i = 1;
-
 	while (n /= 10)
 		i++;
-	return(i);
+	return (i);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char	*str;
-	int	digits;
-	int	negative;
+	char		*str;
+	int			digits;
+	int			negative;
 	long int	num;
 
 	num = n;
@@ -39,18 +38,18 @@ char *ft_itoa(int n)
 		negative = -1;
 		digits++;
 	}
-	str = (char*)malloc(sizeof(char) * (digits + 1));
-	if(!str)
+	str = (char *)malloc(sizeof(char) * (digits + 1));
+	if (!str)
 		return (NULL);
 	*(str + digits) = '\0';
 	digits--;
-	while((digits > 0 && negative == -1) || (digits >= 0 && negative == 0))
+	while ((digits > 0 && negative == -1) || (digits >= 0 && negative == 0))
 	{
 		*(str + digits) = num % 10 + '0';
 		num /= 10;
 		digits--;
 	}
-	if(negative == -1)
+	if (negative == -1)
 		*(str + digits) = '-';
 	return (str);
 }

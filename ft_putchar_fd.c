@@ -6,13 +6,13 @@
 /*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 22:09:14 by ryamagis          #+#    #+#             */
-/*   Updated: 2023/09/10 22:10:26 by ryamagis         ###   ########.fr       */
+/*   Updated: 2023/09/26 17:38:53 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

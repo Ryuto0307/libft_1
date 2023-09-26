@@ -3,21 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yamagishiryuukiyoshi <yamagishiryuukiyo    +#+  +:+       +#+        */
+/*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 23:18:45 by yamagishiry       #+#    #+#             */
-/*   Updated: 2023/06/19 20:46:21 by yamagishiry      ###   ########.fr       */
+/*   Updated: 2023/09/26 17:22:29 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-	{
-		return(c + 32);
-	}
+		return (c + 32);
 	else
-	{
 		return (c);
-	}
 }

@@ -6,15 +6,15 @@
 /*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 17:13:30 by yamagishiry       #+#    #+#             */
-/*   Updated: 2023/09/18 22:01:53 by ryamagis         ###   ########.fr       */
+/*   Updated: 2023/09/26 17:20:21 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isspace(char c)
+int	ft_isspace(char c)
 {
-	return (c == ' ' || (unsigned)c-'\t' < 5);
+	return (c == ' ' || (unsigned)c - '\t' < 5);
 }
 
 int	ft_atoi(const char *s)
@@ -39,7 +39,7 @@ int	ft_atoi(const char *s)
 		s++;
 	}
 	if (neg)
-		return -n;
+		return (-n);
 	else
-		return n;
+		return (n);
 }
