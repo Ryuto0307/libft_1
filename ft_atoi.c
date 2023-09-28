@@ -3,43 +3,62 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryamagis <saint.ryuto@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 17:13:30 by yamagishiry       #+#    #+#             */
-/*   Updated: 2023/09/26 17:20:21 by ryamagis         ###   ########.fr       */
+/*   Updated: 2023/09/27 21:34:08 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(char c)
+long	get_sign(const char **str)
 {
-	return (c == ' ' || (unsigned)c - '\t' < 5);
+	long	sign;
+
+	sign = 1;
+	if (**str == '+' || **str == '-')
+	{
+		if (**str == '-')
+			sign = -1;
+		(*str)++;
+	}
+	return (sign);
 }
 
-int	ft_atoi(const char *s)
+long	convert_long(const char **str, long sign)
 {
-	int	n;
-	int	neg;
+	long	result;
 
-	n = 0;
-	neg = 0;
-	while (ft_isspace(*s))
-		s++;
-	if (*s == '-')
+	result = 0;
+	while ((**str >= '0' && **str <= '9'))
 	{
-		neg = 1;
-		s++;
+		if (sign == 1)
+		{
+			if ((LONG_MAX - (**str - '0')) / 10 >= result)
+				result = (result * 10) + (**str - '0');
+			else
+				return (LONG_MAX);
+		}
+		else
+		{
+			if ((LONG_MIN + (**str - '0')) / 10 <= -result)
+				result = (result * 10) + (**str - '0');
+			else
+				return (LONG_MIN);
+		}
+		(*str)++;
 	}
-	else if (*s == '+')
-		s++;
-	while (ft_isdigit(*s))
-	{
-		n = 10 * n + (*s - '0');
-		s++;
-	}
-	if (neg)
-		return (-n);
-	else
-		return (n);
+	return (result * sign);
+}
+
+
+int	ft_atoi(const char *str)
+{
+	long	sign;
+
+	while(((*str >= 9 && *str <= 13) || *str == 32))
+		str++;
+	sign = get_sign(&str);
+	return ((int)convert_long(&str, sign));
 }

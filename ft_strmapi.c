@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryamagis <saint.ryuto@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 22:07:22 by ryamagis          #+#    #+#             */
-/*   Updated: 2023/09/26 17:33:53 by ryamagis         ###   ########.fr       */
+/*   Updated: 2023/09/27 15:01:48 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char					str;
+	char					*str;
 	unsigned int			i;
 
 	i = 0;
