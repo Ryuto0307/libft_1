@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yamagishiryuukiyoshi <yamagishiryuukiyo    +#+  +:+       +#+        */
+/*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 05:09:25 by yamagishiry       #+#    #+#             */
-/*   Updated: 2023/06/22 06:09:46 by yamagishiry      ###   ########.fr       */
+/*   Updated: 2023/10/03 19:46:05 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	if (i < dstsize)
-	{
 		dst[i] = '\0';
-	}
 	while (src[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }

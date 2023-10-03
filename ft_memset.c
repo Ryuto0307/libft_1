@@ -6,7 +6,7 @@
 /*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 20:35:11 by yamagishiry       #+#    #+#             */
-/*   Updated: 2023/09/12 18:29:33 by ryamagis         ###   ########.fr       */
+/*   Updated: 2023/10/03 21:26:42 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memset(void *buf, int ch, size_t n)
 	while (n > 0)
 	{
 		p[n - 1] = ch;
-		n --;
+		n--;
 	}
 	return (buf);
 }

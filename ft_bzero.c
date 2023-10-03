@@ -6,14 +6,13 @@
 /*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 03:03:25 by yamagishiry       #+#    #+#             */
-/*   Updated: 2023/09/12 18:21:42 by ryamagis         ###   ########.fr       */
+/*   Updated: 2023/10/03 21:21:34 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *buf, size_t n)
+void	ft_bzero(void *buf, size_t n)
 {
 	ft_memset(buf, 0, n);
-	return (NULL);
 }
