@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryamagis <saint.ryuto@gmail.com>           +#+  +:+       +#+        */
+/*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 17:13:30 by yamagishiry       #+#    #+#             */
-/*   Updated: 2023/09/27 21:34:08 by ryamagis         ###   ########.fr       */
+/*   Updated: 2023/09/29 19:59:10 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	get_sign(const char **str)
+static long	get_sign(const char **str)
 {
 	long	sign;
 
@@ -26,7 +26,7 @@ long	get_sign(const char **str)
 	return (sign);
 }
 
-long	convert_long(const char **str, long sign)
+static long	convert_long(const char **str, long sign)
 {
 	long	result;
 
@@ -52,12 +52,11 @@ long	convert_long(const char **str, long sign)
 	return (result * sign);
 }
 
-
 int	ft_atoi(const char *str)
 {
 	long	sign;
 
-	while(((*str >= 9 && *str <= 13) || *str == 32))
+	while ((*str >= '\t' && *str <= 13) || *str == ' ')
 		str++;
 	sign = get_sign(&str);
 	return ((int)convert_long(&str, sign));

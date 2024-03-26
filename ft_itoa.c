@@ -6,19 +6,26 @@
 /*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 14:59:03 by ryamagis          #+#    #+#             */
-/*   Updated: 2023/09/26 17:42:02 by ryamagis         ###   ########.fr       */
+/*   Updated: 2024/03/02 14:52:42 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_digits(int n)
+static size_t	count_digits(int n)
 {
-	size_t	i;
+	long int	i;
 
-	i = 1;
-	while (n /= 10)
+	i = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
 		i++;
+	while (n != 0)
+	{
+		n /= 10;
+		i++;
+	}
 	return (i);
 }
 
@@ -36,20 +43,17 @@ char	*ft_itoa(int n)
 	{
 		num *= -1;
 		negative = -1;
-		digits++;
 	}
 	str = (char *)malloc(sizeof(char) * (digits + 1));
 	if (!str)
 		return (NULL);
-	*(str + digits) = '\0';
-	digits--;
+	str[digits--] = '\0';
 	while ((digits > 0 && negative == -1) || (digits >= 0 && negative == 0))
 	{
-		*(str + digits) = num % 10 + '0';
+		str[digits--] = num % 10 + '0';
 		num /= 10;
-		digits--;
 	}
 	if (negative == -1)
-		*(str + digits) = '-';
+		str[digits] = '-';
 	return (str);
 }

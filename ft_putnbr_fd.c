@@ -6,7 +6,7 @@
 /*   By: ryamagis <ryamagis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 22:16:03 by ryamagis          #+#    #+#             */
-/*   Updated: 2023/09/26 17:38:20 by ryamagis         ###   ########.fr       */
+/*   Updated: 2024/03/26 17:49:45 by ryamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,18 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*s;
-
-	s = ft_itoa(n);
-	write(fd, s, ft_strlen(s));
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
+	}
+	else if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd(n % 10 + '0', fd);
+	}
+	else
+		ft_putchar_fd(n + '0', fd);
 }
